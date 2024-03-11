@@ -1,0 +1,60 @@
+
+{"attribute": "KLOBUK",
+ "arrow":"",
+ "classification":"crn",
+ "subtrees": [
+     {"attribute": "BARVA",
+      "arrow":"ima",
+      "classification":"bel",
+      "subtrees": [
+          {"attribute":"",
+           "arrow": "crna",
+           "classification":"bel",
+           "subtrees":[]},
+          {"attribute":"",
+           "arrow": "siva",
+           "classification":"crn",
+           "subtrees":[]},
+          {"attribute":"",
+           "arrow": "bela",
+           "classification":"bel",
+           "subtrees":[]},
+          {"attribute":"",
+           "arrow": "rumena",
+           "classification":"bel",
+           "subtrees":[]}
+      ]
+     },
+     {"attribute": "BARVA",
+      "arrow":"nima",
+      "classification":"crn",
+      "subtrees": [
+          {"attribute":"",
+           "arrow": "crna",
+           "classification":"crn",
+           "subtrees":[]},
+          {"attribute":"",
+           "arrow": "siva",
+           "classification":"crn",
+           "subtrees":[
+               {"attribute":"",
+                "arrow":"dolg",
+                "classification":"crn",
+                "subtrees":[]},
+               {"attribute":"",
+                "arrow":"kratek",
+                "classification":"bel",
+                "subtrees":[]}
+           ]},
+          {"attribute":"",
+           "arrow": "rumena",
+           "classification":"crn",
+           "subtrees":[]},
+          {"attribute":"",
+           "arrow": "bela",
+           "classification":"bel",
+           "subtrees":[]}
+      ]
+     }
+ ]
+}

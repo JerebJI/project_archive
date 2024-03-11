@@ -1,0 +1,14 @@
+digraph "decision-tree" {
+	margin="0,0"
+	root [label="{b|c: 7|a: 4|b: 4|A}" shape=record]
+	"-5225092844935263102root" [label="{c|[c]: 3|a: 2|b: 1|C}" shape=record]
+	root -> "-5225092844935263102root" [label=a]
+	"4866305923411172007-5225092844935263102root" [label="{a|c: 2|[a]: 0|b: 1|}" shape=record]
+	"-5225092844935263102root" -> "4866305923411172007-5225092844935263102root" [label=a]
+	"9144757988372061727-5225092844935263102root" [label="{b|c: 1|a: 2|[b]: 0|}" shape=record]
+	"-5225092844935263102root" -> "9144757988372061727-5225092844935263102root" [label=b]
+	"-7958597685552262037root" [label="{b|c: 4|a: 0|[b]: 3|C}" shape=record]
+	root -> "-7958597685552262037root" [label=b]
+	"1739567854465424331root" [label="{c|[c]: 0|a: 2|b: 0|B}" shape=record]
+	root -> "1739567854465424331root" [label=c]
+}

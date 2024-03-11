@@ -1,0 +1,14 @@
+digraph "decision-tree" {
+	margin="0,0"
+	-2595915506962515537 [label="{Outlook|Yes|No: 9|Yes: 10}" shape=record]
+	3052274209391887690 [label="{Humidity|No|No: 3|Yes: 5}" shape=record]
+	-2595915506962515537 -> 3052274209391887690 [label=Sunny]
+	-1353923240043485119 [label="{|No|No: 1|Yes: 2}" shape=record]
+	3052274209391887690 -> -1353923240043485119 [label=High]
+	-8791385679140204269 [label="{|Yes|No: 2|Yes: 3}" shape=record]
+	3052274209391887690 -> -8791385679140204269 [label=Normal]
+	-4519365851157256740 [label="{|Yes|No: 1|Yes: 2}" shape=record]
+	-2595915506962515537 -> -4519365851157256740 [label=Overcast]
+	3711433595645751506 [label="{Wind|No|No: 5|Yes: 3}" shape=record]
+	-2595915506962515537 -> 3711433595645751506 [label=Rain]
+}

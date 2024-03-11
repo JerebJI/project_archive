@@ -1,0 +1,92 @@
+{
+    "trace" : [{"attribute": "Outlook",
+                "arrow": "",
+                "cut": "false",
+                "focus": "false",
+                "classification": "Yes",
+                "classification#": {"Yes":10,
+                                     "No":9},
+                "subtrees": [
+                 {"attribute": "Humidity",
+                  "arrow": "Sunny",
+                  "cut": "false",
+                  "focus": "false",
+                  "classification": "No",
+                  "classification#": {"Yes":5,
+                                       "No":3
+                                     },
+                  "subtrees":[
+                   {"attribute": "",
+                    "arrow": "High",
+                    "cut": "false",
+                    "focus": "false",
+                    "classification": "No",
+                    "classification#": {"Yes":2,
+                                         "No":1
+                                       },
+                    "subtrees": []
+                   },
+                   {"attribute": "",
+                    "arrow": "Normal",
+                    "cut": "false",
+                    "focus": "false",
+                    "classification": "Yes",
+                    "classification#": {"Yes":3,
+                                         "No":2
+                                       },
+                    "subtrees":[]
+                   }
+                  ]
+                 },
+                 {"attribute": "",
+                  "arrow": "Overcast",
+                  "cut": "false",
+                  "focus": "false",
+                  "classification": "Yes",
+                  "classification#": {"Yes":2,
+                                       "No":1
+                                     },
+                  "subtrees":[]
+                 },
+                 {"attribute": "Wind",
+                  "arrow": "Rain",
+                  "cut": "false",
+                  "focus": "true",
+                  "classification": "No",
+                  "classification#": {"Yes":3,
+                                       "No":5
+                                     },
+                  "subtrees":[
+                   {"attribute": "",
+                    "arrow": "Strong",
+                    "cut": "true",
+                    "focus": "false",
+                    "classification": "No",
+                    "classification#": {"Yes":1,
+                                         "No":2
+                                       },
+                    "subtrees":[]
+                   },
+                   {"attribute": "",
+                    "arrow": "Weak",
+                    "cut": "true",
+                    "focus": "false",
+                    "classification": "Yes",
+                    "classification#": {"Yes":2,
+                                         "No":3
+                                       },
+                    "subtrees":[]
+                   }
+                  ]
+                 }
+                ],
+               "quantity1":"(Number of wrong categorizations on current node) $=$",
+               "calc1":"$=$ (Number of Yes) $=3$",
+               "quantity2":"(Number of wrong categorizations on leafs of current node) $=$",
+               "calc2":"$=1+3=4$",
+               "comparison":"$3\\leq4$",
+               "conclusion":"PRUNE TREE"
+               }
+              ],
+    "method" : "REP"
+}

@@ -1,0 +1,48 @@
+{ "tree": {"attribute": "BARVA",
+ "arrow":"",
+ "classification":"crn",
+ "subtrees": [
+     {"attribute": "KLOBUK",
+      "arrow":"crna",
+      "classification":"crn",
+      "subtrees": [
+          {"attribute":"",
+           "arrow": "ima",
+           "classification":"bel",
+           "subtrees":[]},
+          {"attribute":"",
+           "arrow": "nima",
+           "classification":"crn",
+           "subtrees":[]}
+      ]},
+     {"attribute": "",
+      "arrow":"bela",
+      "classification":"bel",
+      "subtrees": []},
+     {"attribute": "REP",
+      "arrow":"siva",
+      "classification":"crn",
+      "subtrees": [
+          {"attribute":"",
+           "arrow": "dolg",
+           "classification":"crn",
+           "subtrees":[]},
+          {"attribute":"",
+           "arrow": "kratek",
+           "classification":"bel",
+           "subtrees":[]}
+      ]},
+     {"attribute": "KLOBUK",
+      "arrow":"rumena",
+      "classification":"crn",
+      "subtrees": [
+          {"attribute":"",
+           "arrow": "ima",
+           "classification":"bel",
+           "subtrees":[]},
+          {"attribute":"",
+           "arrow": "nima",
+           "classification":"crn",
+           "subtrees":[]}
+      ]}
+ ]}, "pa": {"bel":0.5, "crn":0.5}}

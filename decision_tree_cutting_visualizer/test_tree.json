@@ -1,0 +1,43 @@
+{"attribute": "Outlook",
+     "arrow": "",
+     "classification": "Yes",
+     "subtrees": [
+       {"attribute": "Humidity",
+        "arrow": "Sunny",
+        "classification": "No",
+        "subtrees":[
+          {"attribute": "",
+           "arrow": "High",
+           "classification": "No",
+           "subtrees": []
+          },
+          {"attribute": "",
+           "arrow": "Normal",
+           "classification": "Yes",
+           "subtrees":[]
+          }
+        ]
+       },
+       {"attribute": "",
+        "arrow": "Overcast",
+        "classification": "Yes",
+        "subtrees":[]
+       },
+       {"attribute": "Wind",
+        "arrow": "Rain",
+        "classification": "No",
+        "subtrees":[
+          {"attribute": "",
+           "classification": "No",
+           "arrow": "Strong",
+           "subtrees":[]
+          },
+          {"attribute": "",
+           "arrow": "Weak",
+           "classification": "Yes",
+           "subtrees":[]
+          }
+        ]
+       }
+     ]
+    }

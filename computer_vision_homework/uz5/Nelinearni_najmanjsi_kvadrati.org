@@ -1,0 +1,9 @@
+* Nelinearni najmanjši kvadrati
+** Aproksimacija podatkov z nelinearno funkcijo
+
+Podatki: x_i | x_1 x_2 ... x_N
+ N >> 1  y_i | y_1 y_2 ... y_N
+
+ | $x_i$   | $x_1$ | $x_2$ | ... | $x_N$ |
+ | $y_i$ | $y_1$ | $y_2$ | ... | $y_N$ |
+ $x_i\neq x_j$
