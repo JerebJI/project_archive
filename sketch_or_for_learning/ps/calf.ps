@@ -1,0 +1,51 @@
+%!PS
+/PH 595 def
+/PW 842 def
+<< /PageSize [PW PH] >> setpagedevice
+
+/X0 10 def % zaceten x
+/Y0 PH 10 sub def % zaceten y
+/SP 82 def % sirina polj
+/VP 34 def % visina polj
+/VS [15 16 15 15 15 16 15 15 14 14] def % velikosti stolpcev
+/VM [31 30 31 30 28] def % velikosti mesecev
+/TM [(Oktober)(November)(December)(Januar)(Februar)] def % tekst mesecev
+/VT [2 2 2 2 2] def % koliko polj zaseda tekst
+/PDT 6 def % prvi dan v tednu za ves koledar
+
+/rvars { {exch def} forall } def % za lazjo uporabo lok. spr.
+/fold { 10 dict begin [/op /a] rvars a 0 get 1 1 a length 1 sub { a exch get op } for end } def
+
+/zacStol {gsave 0.6 setgray currentpoint VP sub SP VT m get mul VP rectfill grestore
+        currentpoint VP sub SP VT m get mul VP rectstroke
+        /Helvetica-Bold findfont 20 scalefont setfont
+        gsave 5 VP 1.5 div neg rmoveto TM m get show grestore % napisi dan
+} def
+
+% izris stolpcev
+X0 Y0 moveto
+10 dict begin
+  /dvt PDT def % dan v tednu
+  /m 0 def % mesec
+  /dvm 1 def % dan v mesecu
+  /s 0 def % stolpec
+  /pvs 1 def % polje v stolpcu
+  /str 20 string def % za cvs
+  1 1 VM {add} fold {
+    /p exch def % trenutno polje
+    %(polje ) print p = ( od ) print VM {add} fold =  
+    %(mesec ) print m = ( dvm ) print dvm =
+    %(stolp ) print s = ( pvs ) print pvs =
+    
+    dvm VM m get gt {/m m 1 add def /dvm 1 def X0 SP s 1 add mul add Y0 moveto zacStol} if % naslednji mesec?
+    1 p eq {zacStol 0 VP neg rmoveto } if % popravek
+    pvs VS s get gt {X0 SP s 1 add mul add Y0 VP sub moveto /s s 1 add def /pvs 1 def } if % naslednji stolpec?
+    5 dvt eq 6 dvt eq or {gsave 0.8 setgray currentpoint VP sub SP VP rectfill grestore} if % vikend?
+    currentpoint VP sub SP VP rectstroke % izrisi polje
+    /Times-Roman findfont 12 scalefont setfont
+    gsave 5 VP 2 div neg rmoveto dvm str cvs show grestore % napisi dan
+    currentpoint VP sub moveto % premakni dol
+    /dvt dvt 1 add 7 mod def % zamenjaj dan v tednu
+    /dvm dvm 1 add def /pvs pvs 1 add def % povecaj dvm in pvs
+  } for
+end

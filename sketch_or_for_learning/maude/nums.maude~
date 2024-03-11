@@ -1,0 +1,25 @@
+fmod NUMS is
+  sort Nar . -- definiraj obstoj naravnih stevil
+  op ena : -> Nar . -- P1: ena je naravno stevilo
+  -- P2: vsako stevilo (x) ima naslednika (s x)
+  -- P3: stevilo 1 ni naslednik nobenega stevila (sledi iz s_)
+  -- P4: razlicni naravni stevili imata razlicna naslednika (sledi iz cat)
+  op s_ : Nar -> Nar .
+  -- P5: popolna indukcija -- NI DEFINIRANA
+
+  sort Bool .
+  ops resnica laz : -> Bool .
+  var N M .
+  ops (_vecjeOd_) (_manjseOd_) (_je_) : Nar Nar -> Bool .
+  eq N je N = true.
+  eq s N vecjeOd ena = resnica .
+  eq ena vecjeOd ena = laz .
+  eq ena vecjeOd s N = laz .
+  eq s N vecjeOd s M = N vecjeOd M .
+
+  eq ena manjseOd s N = resnica .
+  eq ena manjseOd ena = laz .
+  eq s N manjseOd ena = laz .
+  eq s N manjseOd s M = N manjseOd M .
+  op _+_ : Nar Nar -> Nar .
+endfm

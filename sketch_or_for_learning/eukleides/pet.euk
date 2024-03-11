@@ -1,0 +1,21 @@
+box -10, -8, 10, 8
+D E F triangle 6
+T = point(0,0)
+A.B.C = translation(D.E.F, vector(3,3))
+A' = translation(A,2*vector(A,T))
+B' = translation(B,2*vector(B,T))
+C' = translation(C,2*vector(C,T))
+draw
+   (A.B.C)
+   (A'.B'.C')
+   T
+end
+draw dashed
+   A.A' ; B.B' ; C.C'
+end
+
+label
+  A 135 deg ; B 45 deg ; C 45 deg
+  T 135 deg
+  A' 100 deg ; B' 180 deg ; C' 255 deg
+end

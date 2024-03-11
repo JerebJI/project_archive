@@ -1,0 +1,13 @@
+from pwn import *
+io=remote("20.50.238.106", 1337)
+print(io.recvline())
+io.send(b'\n')
+print(io.recvline())
+print(io.recvline())
+a=(io.recvline())
+print(a)
+oa=(a[::-1][1:]+b"\n")
+print(b"oa: "+oa)
+io.send(oa)
+print(io.recvline())
+print(io.recvline())

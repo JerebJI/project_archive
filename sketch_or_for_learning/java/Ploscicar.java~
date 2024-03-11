@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class Ploscicar {
+    private static int plosc(int h, int w, int k) {
+	int v = Math.pow(2,k);
+	int kh = h / v;
+	int kw = w / v;
+	int st = kh * kw;
+	if (st==0 && k==0) {
+	    return 0;
+	} else {
+	    return st + plosc(h%v, w%v, k-1);
+	}
+    public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	int h = sc.nextInt();
+	int w = sc.nextInt();
+	int k = sc.nextInt();
+	System.out.printlnt("%d%n",plosc(h,w,k));
+    }
+}

@@ -1,0 +1,17 @@
+box -5, -5, 7, 4
+A B C triangle
+A'.B'.C' = translation(A.B.C, vector(-4,-4))
+
+draw
+   (A.B.C)
+   (A'.B'.C')
+end
+
+draw dashed
+  A.A' ; B.B' ; C.C'
+end
+
+label
+  A 270 deg ; B 45 deg ; C 45 deg
+  A' 180 deg ; B' -45 deg ; C' 135 deg
+end

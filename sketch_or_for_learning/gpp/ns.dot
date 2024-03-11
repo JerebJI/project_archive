@@ -1,0 +1,14 @@
+#define NS _#1 [label="#1",fontsize=45] ; CO(#1,T) ; CO(#1,II_S) ; CO(#1,III_T) ; CO(#1,III_D) ; CO(#1,S) ; CO(#1,D) ;  CO(#1,VI_T) ; CO(#1,VI_S) ; CO(#1,VII_D)
+#define CO __#1#2 [label="#2"] ; _#1 -> __#1#2
+#define N sr -> _#1
+digraph regexp {
+  layout=twopi
+  ranksep=5;
+  ratio=auto;
+  fontname="Helvetica,Arial,sans-serif"
+  node [fontname="Helvetica,Arial,sans-serif"]
+  edge [fontname="Helvetica,Arial,sans-serif"]
+  sr [label=""]
+  NS(T) ; NS(II_S) ; NS(III_T) ; NS(III_D) ; NS(S) ; NS(D) ; NS(VI_T) ; NS(VI_S) ; NS(VII_D)
+  N(T) ; N(II_S) ; N(III_T) ; N(III_D) ; N(S) ; N(D) ; N(VI_T) ; N(VI_S) ; N(VII_D)
+}

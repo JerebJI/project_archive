@@ -1,0 +1,50 @@
+object Form1: TForm1
+  Left = 487
+  Height = 278
+  Top = 314
+  Width = 597
+  Caption = 'Form1'
+  ClientHeight = 278
+  ClientWidth = 597
+  LCLVersion = '2.2.2.0'
+  object tekst: TMemo
+    Left = 8
+    Height = 226
+    Top = 44
+    Width = 320
+    OnChange = tekstChange
+    TabOrder = 0
+  end
+  object zlogi: TButton
+    Left = 8
+    Height = 29
+    Top = 8
+    Width = 160
+    Caption = 'Poskusi najti zloge'
+    OnClick = zlogiClick
+    TabOrder = 1
+  end
+  object izhod: TMemo
+    Left = 344
+    Height = 226
+    Top = 44
+    Width = 248
+    TabOrder = 2
+  end
+  object tonNacin: TEdit
+    Left = 344
+    Height = 29
+    Top = 8
+    Width = 160
+    TabOrder = 3
+  end
+  object sprozi: TButton
+    Left = 512
+    Height = 29
+    Top = 8
+    Width = 80
+    Caption = 'Najdi'
+    OnClick = sproziClick
+    TabOrder = 4
+  end
+end

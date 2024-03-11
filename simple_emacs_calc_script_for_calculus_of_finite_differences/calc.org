@@ -1,0 +1,22 @@
+[dif(x,a+b):=dif(x,a)+dif(x,b),
+ dif(x,a*b):=todo(a,[plain(quote(x)):=x+1])*dif(x,b)+b*dif(x,a),
+ dif(x,a/b):=(b*dif(x,a)-a*dif(x,b))/(b*todo(b,[plain(quote(x)):=x+1])),
+ todo(a,b):=rewrite(a,b),
+ dif(x,y):=0 :: constant(y),
+ dif(x,x):=1,
+ dif(x,fp(x+opt(a),n)):=n*fp(x+a,n-1),
+ dif(x,a^x):=(a-1)*a^x::constant(a),
+ dif(x,x^n):=dif(x,vfakt(x^n)),
+ dif(x,log(x+opt(a))):=log(1+1/(x+a)),
+ dif(x,cos(opt(a)*x+opt(b))):=-2*sin(1/2)*sin(a*x+b-a/2),
+ dif(x,sin(opt(a)*x+opt(b))):=2*sin(a/2)*cos(a*x+b+a/2),
+ 
+ s1(n,n):=1, s1(n,1):=-(n-1)*s1(n-1,1), s1(n,r):=s1(n-1,r-1)-(n-1)*s1(n-1, r) :: remember,
+ s2(n,1):=1, s2(n,n):=1, s2(n,r):=s2(n-1,r-1)+r*s2(n-1,r) :: remember,
+ 
+ fp(x,0):=1, fp(x,n):=(x-n+1)*fp(x,n-1) :: n>=0, fp(x,n):=1/fp(x,-n) :: negative(n),
+ 
+ vfakt(a+b):=vfakt(a)+vfakt(b),
+ vfakt(opt(c)*x^n):=c*vf(x,n,1)::constant(c),
+ vf(x,n,n):=fp(x,n), vf(x,n,a):=s2(n,a)*fp(x,a)+vf(x,n,a+1)
+]

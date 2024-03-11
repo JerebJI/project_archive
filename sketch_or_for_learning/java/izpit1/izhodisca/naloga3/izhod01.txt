@@ -1,0 +1,13 @@
+[ placaNadrejenega ]
+Dejan -> 3000
+Denis -> 4000
+Dijana -> 4500
+Ditka -> 3500
+Doris -> 6000
+Drago -> -1
+Sandra -> 3000
+Sanja -> 3500
+Simon -> -1
+Sonja -> 4000
+Suzana -> -1
+Stane -> 5000

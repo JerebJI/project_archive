@@ -1,0 +1,20 @@
+box -10, -10, 10, 10
+T = point(0,0)
+p = line(T,vector(1,1))
+D E F triangle 3, 5, 4
+A.B.C = translation(D.E.F, vector(-4,3))
+A'.B'.C' = reflection(A.B.C, p)
+draw
+   (A.B.C)
+   (A'.B'.C')
+   p
+end
+
+draw dashed
+   A.A' ; B.B' ; C.C'
+end
+
+label
+   A 180 deg ; B 45 deg ; C 45 deg
+   A' 270 deg ; B' 45 deg ; C' 45 deg
+end

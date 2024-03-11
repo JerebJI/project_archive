@@ -1,0 +1,8 @@
+#use "String"
+#use "List"
+
+let rec read_list () =
+  read_line ()
+  |> String.split_on_char ' '
+  |> List.Filter (fun x -> x<>"")
+  |> List.map (string_to_float)

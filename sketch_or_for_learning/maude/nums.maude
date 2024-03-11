@@ -1,0 +1,43 @@
+fmod NUMS is
+  --- definiraj mnozice stevil
+  sorts Nar Neg Nic Cel Rac SKom .
+  subsorts Nar Nic Neg < Cel < Rac < SKom .
+  
+  op ena : -> Nar . --- P1: ena je naravno stevilo
+  --- P2: vsako stevilo (x) ima naslednika (s x)
+  --- P3: stevilo 1 ni naslednik nobenega stevila (sledi iz s_)
+  --- P4: razlicni naravni stevili imata razlicna naslednika (sledi iz cat)
+  op s_ : Nar -> Nar .
+  --- P5: popolna indukcija -- NI DEFINIRANA
+
+  --- definicija resnice in lazi
+  sort Izj .
+  ops resnica laz : -> Izj .
+  --- definicija velikostnih razmerij
+  vars N M : Nar .
+  ops _vecjeOd_ _manjseOd_ _je_ : Nar Nar -> Izj .
+  eq N je N = resnica .
+  eq s N vecjeOd ena = resnica .
+  eq ena vecjeOd ena = laz .
+  eq ena vecjeOd s N = laz .
+  eq s N vecjeOd s M = N vecjeOd M .
+
+  eq ena manjseOd s N = resnica .
+  eq ena manjseOd ena = laz .
+  eq s N manjseOd ena = laz .
+  eq s N manjseOd s M = N manjseOd M .
+
+  --- definicija sestevanja
+  op _+_ : Cel Cel -> Cel [comm assoc] .
+  eq ena + ena = s ena .
+  eq s N + M = s ( N + M ) .
+
+  --- definicija enote sestevanja
+  op nic : -> Nic .
+  eq nic + s N = s N .
+
+  --- definicija negativnih stevil
+  op n_ : Cel -> Cel .
+  ---eq n n N -> N .
+  ---eq n s N + s M -> n N + M .
+endfm

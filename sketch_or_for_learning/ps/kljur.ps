@@ -1,0 +1,29 @@
+%!PS
+/PW 595 def
+/PH 842 def
+<< /PageSize [PW PH] >> setpagedevice
+/STV 20 def
+/STS 5 def
+/VP PH 20 sub STV div def
+/SP PW 20 sub STS div def
+
+% narisi stran
+  % pojdi na zacetek
+    10   PH 10 sub  moveto
+  % narisi tabelo
+  % narisi stolpce
+  1 1 STS {
+      % narisi vrsto v enem stolpcu
+      1 1 STV {
+          % narisi polje
+            currentpoint VP sub SP VP rectstroke
+            currentpoint VP sub SP 20 sub VP rectstroke
+          % premakni se dol
+            0 VP neg rmoveto
+      } for % vrsta-1
+      % premakni se desno in gor
+        SP 0 rmoveto
+        currentpoint 0 mul PH 10 sub add moveto
+  } for % stolpce-1
+
+showpage
